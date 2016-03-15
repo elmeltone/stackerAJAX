@@ -46,18 +46,13 @@ var showAnswerer = function(answer) {
 	answerElem.attr('href', answer.link);
 	answerElem.text('src', answer.display_name);
 
-	// set the .viewed for question property in result
+	// set the reputation property in result
 	var reputation = result.find('.reputation');
 	reputation.text(answer.reputation);
 
-	// set some properties related to asker
-	var asker = result.find('.asker');
-	asker.html('<p>Name: <a target="_blank" '+
-		'href=http://stackoverflow.com/users/' + question.owner.user_id + ' >' +
-		question.owner.display_name +
-		'</a></p>' +
-		'<p>Reputation: ' + question.owner.reputation + '</p>'
-	);
+	// set the accept rate property in result
+	var acceptRate = result.find('.accept_rate');
+	acceptRate.text(answer.accept_rate);
 
 	return result;
 };
