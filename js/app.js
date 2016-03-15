@@ -110,10 +110,10 @@ var getAnswerers = function(tags) {
 	
 	// the parameters we need to pass in our request to StackOverflow's API
 	var request = { 
-		tagged: tags,
+		tags: tags,
 		site: 'stackoverflow',
 		order: 'desc',
-		sort: 'creation'
+		sort: 'reputation'
 	};
 	
 	$.ajax({
@@ -123,7 +123,7 @@ var getAnswerers = function(tags) {
 		type: "GET",
 	})
 	.done(function(result){ //this waits for the ajax to return with a succesful promise object
-		var searchResults = showSearchResults(request.tagged, result.items.length);
+		var searchResults = showSearchResults(request.tags, result.items.length);
 
 		$('.search-results').html(searchResults);
 		//$.each is a higher order function. It takes an array and a function as an argument.
