@@ -148,4 +148,13 @@ $(document).ready( function() {
 		var tags = $(this).find("input[name='tags']").val();
 		getUnanswered(tags);
 	});
+	
+	$('.inspiration-getter').submit( function(e){
+		e.preventDefault();
+		// zero out results if previous search has run
+		$('.results').html('');
+		// get the value of the tags the user submitted
+		var tags = $(this).find("input[name='tags']").val();
+		getAnswerers(tags);
+	});
 });
