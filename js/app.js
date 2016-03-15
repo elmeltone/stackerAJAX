@@ -33,22 +33,22 @@ var showQuestion = function(question) {
 
 var showAnswerer = function(answer) {
 	
-	// clone our result template code
+	// clone result template code
 	var result = $('.templates .answer').clone();
 	
-	// Set the question properties in result
+	// Set the answer properties in result
 	var answerElem = result.find('.profile_image a');
 	answerElem.attr('href', answer.link);
 	answerElem.attr('src', answer.profile_image);
 
-	// set the date asked property in result
-	var asked = result.find('.asked-date');
-	var date = new Date(1000*question.creation_date);
-	asked.text(date.toString());
+	// set the name property in result
+	var displayName = result.find('.display_name a');
+	answerElem.attr('href', answer.link);
+	answerElem.text('src', answer.display_name);
 
 	// set the .viewed for question property in result
-	var viewed = result.find('.viewed');
-	viewed.text(question.view_count);
+	var reputation = result.find('.reputation');
+	reputation.text(answer.reputation);
 
 	// set some properties related to asker
 	var asker = result.find('.asker');
