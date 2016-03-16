@@ -1,5 +1,23 @@
 body {
 	font-family: Arial,'Helvetica Neue',Helvetica,sans-serif;
+	background-color: lightgray;
+	color: #444;
+}
+
+a:link {
+	color: #444;
+}
+
+a:visited {
+	color: midnightblue;
+}
+
+.button {
+	border: 0;
+	border-radius: 8px;
+	color: #F67A00;
+	background-color: #444;
+	font-size: 10px;
 }
 
 .container {
@@ -49,16 +67,19 @@ body {
 }
 
 .result {
-	border: 0;
-	border-top: 1.985px solid darkgray;
+	border-bottom: 1.75px solid darkgray;
 	list-style-type: none;
 	margin: 0.5em auto;
 	padding: 0.5em auto;
 }
 
-.question-text, .profile-image {
-	height: 100%;
-	vertical-align: center;
+#answerBox {
+	padding: 0.5em;
+}
+
+.question-text, .profile-image, .display_name {
+	font-style: italic;
+	font-size: 24px;
 }
 
 .error {
