@@ -38,22 +38,22 @@ var showAnswerer = function(answer) {
 	
 	// Set the answerer properties in result
 	var answerElemLink = result.find('.profile_image a');
-	answerElemLink.attr('href', answer.link);
+	answerElemLink.attr('href', answer.user.link);
 	var answerElemPic = result.find('.profile_image img');
-	answerElemPic.attr("src", answer.profile_image);
+	answerElemPic.attr("src", answer.user.profile_image);
 
 	// set the name property in result
 	var displayName = result.find('.display_name a');
-	displayName.attr('href', answer.link);
-	displayName.text(displayName.display_name);
+	displayName.attr('href', answer.user.link);
+	displayName.text(answer.user.display_name);
 
 	// set the reputation property in result
 	var reputation = result.find('.reputation');
-	reputation.text(answer.reputation);
+	reputation.text(answer.user.reputation);
 
 	// set the accept rate property in result
 	var acceptRate = result.find('.accept_rate');
-	acceptRate.text(answer.accept_rate);
+	acceptRate.text(answer.user.accept_rate);
 
 	return result;
 };
