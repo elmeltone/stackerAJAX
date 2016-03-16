@@ -36,15 +36,16 @@ var showAnswerer = function(answer) {
 	// clone result template code
 	var result = $('.templates .answer').clone();
 	
-	// Set the answer properties in result
-	var answerElem = result.find('.profile_image a');
-	answerElem.attr('href', answer.link);
-	answerElem.attr('src', answer.profile_image);
+	// Set the answerer properties in result
+	var answerElemLink = result.find('.profile_image a');
+	answerElemLink.attr('href', answer.link);
+	var answerElemPic = result.find('.profile_image img');
+	answerElemPic.attr("src", answer.profile_image);
 
 	// set the name property in result
 	var displayName = result.find('.display_name a');
-	answerElem.attr('href', answer.link);
-	answerElem.text('src', answer.display_name);
+	displayName.attr('href', answer.link);
+	displayName.text(displayName.display_name);
 
 	// set the reputation property in result
 	var reputation = result.find('.reputation');
@@ -112,10 +113,10 @@ var getAnswerers = function(tags) {
 	
 	// the parameters we need to pass in our request to StackOverflow's API
 	var request = { 
-		tags: tags,
+		tagged: tags,
 		site: 'stackoverflow',
 		order: 'desc',
-		sort: 'reputation'
+		sort: 'reputation',
 	};
 	
 	$.ajax({
