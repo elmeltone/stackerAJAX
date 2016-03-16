@@ -49,11 +49,11 @@ var showAnswerer = function(answer) {
 
 	// set the reputation property in result
 	var reputation = result.find('.reputation');
-	reputation.text(answer.user.reputation);
+	reputation.text('Reputation: ' + answer.user.reputation);
 
 	// set the accept rate property in result
 	var acceptRate = result.find('.accept_rate');
-	acceptRate.text(answer.user.accept_rate);
+	acceptRate.text('Accept Rate: ' + answer.user.accept_rate);
 
 	return result;
 };

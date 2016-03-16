@@ -50,12 +50,15 @@ body {
 
 .result {
 	border: 0;
-	/*border-top: 1px solid black;
-	border-right: 0;*/
-	border-top: 1px solid black;
-	/*border-left: 0;*/
-	padding: 5px;
-	margin: 0.5em auto 1em auto;
+	border-top: 1.985px solid darkgray;
+	list-style-type: none;
+	margin: 0.5em auto;
+	padding: 0.5em auto;
+}
+
+.question-text, .profile-image {
+	height: 100%;
+	vertical-align: center;
 }
 
 .error {
