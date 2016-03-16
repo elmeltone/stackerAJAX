@@ -13,19 +13,18 @@ var showQuestion = function(question) {
 	// set the date asked property in result
 	var asked = result.find('.asked-date');
 	var date = new Date(1000*question.creation_date);
-	asked.text(date.toString());
+	asked.text('Asked: ' + date.toString());
 
 	// set the .viewed for question property in result
 	var viewed = result.find('.viewed');
-	viewed.text(question.view_count);
+	viewed.text('Views: ' + question.view_count);
 
 	// set some properties related to asker
 	var asker = result.find('.asker');
-	asker.html('<p>Name: <a target="_blank" '+
+	asker.html('<p>Asker:<br><a target="_blank" '+
 		'href=http://stackoverflow.com/users/' + question.owner.user_id + ' >' +
 		question.owner.display_name +
-		'</a></p>' +
-		'<p>Reputation: ' + question.owner.reputation + '</p>'
+		'</a><br>Reputation: ' + question.owner.reputation + '</p>'
 	);
 
 	return result;
