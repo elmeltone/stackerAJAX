@@ -75,6 +75,7 @@ a:visited {
 
 #answerBox {
 	padding: 0.5em;
+	padding-left: 10%;
 }
 
 .question-text, .profile-image, .display_name {
