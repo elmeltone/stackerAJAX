@@ -22,7 +22,9 @@ a:visited {
 
 .container {
 	margin: 3em auto;
-	width: 600px;
+	width: 60%;
+	max-width: 600px;
+	min-width: 200px;
 }
 
 .hidden {
@@ -86,4 +88,16 @@ a:visited {
 .error {
 	background-color: #F78181;
 	padding: 1em;
+}
+
+@media screen and (max-width: 450px) {
+	.inputBox {
+		width: 70%;
+	}
+	.result {
+		font-size: 12px;
+	}
+	.question-text, .profile-image, .display_name {
+		font-size: 16px;
+	}
 }
