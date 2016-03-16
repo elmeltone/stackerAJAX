@@ -1,5 +1,4 @@
-StackOverflow Reputation Builder
-Thinkful StackOverflow Reputation Builder App
+Thinkful: StackOverflow Reputation Builder App
 
 Thinkful Project Directions:
 
