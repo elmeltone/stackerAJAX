@@ -61,7 +61,7 @@ var showAnswerer = function(answer) {
 // this function takes the results object from StackOverflow
 // and returns the number of results and tags to be appended to DOM
 var showSearchResults = function(query, resultNum) {
-	var results = resultNum + ' results for <strong>' + query + '</strong>';
+	var results = '<strong>' + resultNum + ' results</strong';
 	return results;
 };
 
@@ -120,7 +120,7 @@ var getAnswerers = function(tags) {
 	};
 	
 	$.ajax({
-		url: "http://api.stackexchange.com/2.2/tags/" + request.tags + "/top-answerers/all_time",
+		url: "http://api.stackexchange.com/2.2/tags/" + request.tagged + "/top-answerers/all_time",
 		data: request,
 		dataType: "jsonp",//use jsonp to avoid cross origin issues
 		type: "GET",
