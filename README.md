@@ -7,5 +7,5 @@ In this assignment, you will write the code that will bring the second feature o
 To clarify, the requirements for this feature are:
 
 Users can submit a topic they want to find top answerers for on Stack Overflow.
-The app makes an AJAX call to the appropriate endpoint on the StackExchange API (there are a few hints below).
+The app makes an AJAX call to the appropriate endpoint on the StackExchange API.
 The DOM is updated with information about top answerers (if any) after the response is returned.
